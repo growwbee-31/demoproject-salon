@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Luxe Beauty Salon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root { --primary-gold: #d4a373; --dark-charcoal: #1a1a1a; --soft-white: #faf9f6; --whatsapp-green: #25d366; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--soft-white); color: var(--dark-charcoal); overflow-x: hidden; }
+        .navbar-custom-container { padding-top: 20px; position: absolute; width: 100%; z-index: 1000; }
+        .navbar-main { background-color: rgba(26, 26, 26, 0.9) !important; border-radius: 50px; padding: 10px 40px; backdrop-filter: blur(5px); }
+        .navbar-brand { font-weight: 700; letter-spacing: 2px; color: #fff !important; }
+        .navbar-brand span { color: var(--primary-gold); }
+        .nav-link { color: rgba(255, 255, 255, 0.8) !important; text-transform: uppercase; margin-left: 15px; font-size: 0.8rem; }
+        .nav-link:hover { color: var(--primary-gold) !important; }
+        .nav-social-icons { border-left: 1px solid rgba(255,255,255,0.2); margin-left: 20px; padding-left: 20px; display: flex; align-items: center; }
+        .nav-social-icons a { color: white; margin: 0 8px; font-size: 1rem; transition: 0.3s; }
+        .nav-social-icons a:hover { color: var(--primary-gold); }
+        /* --- PAGE HEADER --- */
+        .contact-header {
+            height: 300px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            padding-top: 60px;
+        }
+        .contact-header h1 { font-size: 3rem; font-weight: 800; text-transform: uppercase; }
+
+        /* --- CONTACT CONTENT --- */
+        .contact-section { padding: 80px 0; }
+        
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+
+        .icon-circle {
+            width: 50px;
+            height: 50px;
+            background: var(--soft-white);
+            color: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* --- FORM STYLING --- */
+        .form-control {
+            border: 1px solid #eee;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background: #fdfdfd;
+        }
+        .form-control:focus {
+            border-color: var(--primary-gold);
+            box-shadow: none;
+            background: white;
+        }
+
+        .btn-send {
+            background: var(--dark-charcoal);
+            color: white;
+            padding: 12px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .btn-send:hover {
+            background: var(--primary-gold);
+            transform: translateY(-2px);
+        }
+
+        /* --- MAP --- */
+        .map-container {
+            height: 450px;
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-top: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+         footer { background: var(--dark-charcoal); color: white; padding: 80px 0 30px; }
+        .footer-logo { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; display: block; }
+        .footer-logo span { color: var(--primary-gold); }
+        .footer-heading { color: var(--primary-gold); text-transform: uppercase; font-size: 1rem; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--primary-gold); padding-left: 5px; }
+        .social-links a { color: white; margin-right: 15px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--primary-gold); }
+        @media (max-width: 991px) { .nav-social-icons { border-left: none; margin-left: 0; padding-left: 15px; margin-top: 15px; } .navbar-main { border-radius: 0; } }
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.5rem; } .carousel-item { height: 70vh; } }
+    </style>
+</head>
+<body>
+
+     <div class="container navbar-custom-container">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-main">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#">LUXE<span>SALON</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <div class="nav-social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="contact-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We’d love to hear from you or see you at the salon.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="info-box">
+                        <h3 class="fw-bold mb-4">Contact Details</h3>
+                        
+                        <div class="d-flex mb-4">
+                            <div class="icon-circle me-3"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Our Location</h6>
+                                <p class="text-muted small mb-0">123 Elegance St, Beauty District,<br>New York, NY 10001</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="icon-circle me-3"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone Number</h6>
+                                <p class="text-muted small mb-0">+1 (212) 555-0123</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mb-4">
+                            <div class="icon-circle me-3"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email Address</h6>
+                                <p class="text-muted small mb-0">hello@luxesalon.com</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-4 opacity-25">
+
+                        <h6 class="fw-bold mb-3">Opening Hours</h6>
+                        <div class="d-flex justify-content-between small text-muted mb-1">
+                            <span>Mon - Fri:</span> <span>9:00 AM - 8:00 PM</span>
+                        </div>
+                        <div class="d-flex justify-content-between small text-muted">
+                            <span>Sat - Sun:</span> <span>10:00 AM - 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="bg-white p-5 rounded-4 shadow-sm h-100">
+                        <h3 class="fw-bold mb-4">Send a Message</h3>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-send">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617543015525!2d-73.985428!3d40.748441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a145!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1625000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="container">
+            <div class="row g-4 text-md-start text-center">
+                <div class="col-lg-4 col-md-6">
+                    <a class="footer-logo text-white text-decoration-none" href="#">LUXE<span>SALON</span></a>
+                    <p class="text-white-50 pe-md-5">Your premier destination for luxury beauty and wellness. We combine artistry with high-end care to redefine your style.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="contact.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Hair Styling</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Nail Art</a></li>
+                        <li><a href="#">Bridal Makeup</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Visit Us</h5>
+                    <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-gold"></i> 123 Elegance St, NY 10001</p>
+                    <p class="text-white-50 mb-2"><i class="fas fa-phone-alt me-2 text-gold"></i> +1 234 567 890</p>
+                    <p class="text-white-50"><i class="fas fa-envelope me-2 text-gold"></i> hello@luxesalon.com</p>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="small mb-0 opacity-50">& copy; 2026 Luxe Beauty Salon. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

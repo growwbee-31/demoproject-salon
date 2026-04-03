@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Beauty Salon | Full Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary-gold: #d4a373; --dark-charcoal: #1a1a1a; --soft-white: #faf9f6; --whatsapp-green: #25d366; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: var(--soft-white); color: var(--dark-charcoal); overflow-x: hidden; }
+        .navbar-custom-container { padding-top: 20px; position: absolute; width: 100%; z-index: 1000; }
+        .navbar-main { background-color: rgba(26, 26, 26, 0.9) !important; border-radius: 50px; padding: 10px 40px; backdrop-filter: blur(5px); }
+        .navbar-brand { font-weight: 700; letter-spacing: 2px; color: #fff !important; }
+        .navbar-brand span { color: var(--primary-gold); }
+        .nav-link { color: rgba(255, 255, 255, 0.8) !important; text-transform: uppercase; margin-left: 15px; font-size: 0.8rem; }
+        .nav-link:hover { color: var(--primary-gold) !important; }
+        .nav-social-icons { border-left: 1px solid rgba(255,255,255,0.2); margin-left: 20px; padding-left: 20px; display: flex; align-items: center; }
+        .nav-social-icons a { color: white; margin: 0 8px; font-size: 1rem; transition: 0.3s; }
+        .nav-social-icons a:hover { color: var(--primary-gold); }
+
+        /* --- PAGE HEADER --- */
+        .page-header {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+            background-size: cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            padding-top: 80px;
+        }
+        .page-header h1 { font-size: 3.5rem; font-weight: 800; text-transform: uppercase; }
+
+        /* --- OUR STORY SECTION --- */
+        .story-section { padding: 100px 0; }
+        .accent-text { color: var(--primary-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; }
+        
+        /* --- TEAM SECTION --- */
+        .team-section { padding: 100px 0; background-color: white; }
+        .team-card { border: none; background: transparent; transition: 0.3s; }
+        .team-img { 
+            height: 400px; 
+            width: 100%; 
+            object-fit: cover; 
+            border-radius: 15px; 
+            margin-bottom: 20px;
+            filter: grayscale(20%);
+        }
+        .team-card:hover .team-img { filter: grayscale(0%); transform: scale(1.02); transition: 0.4s; }
+        .team-role { color: var(--primary-gold); font-style: italic; margin-bottom: 15px; display: block; }
+
+        /* --- STATS SECTION --- */
+        .stats-bar { background: var(--dark-charcoal); color: white; padding: 60px 0; text-align: center; }
+        .stat-item h3 { font-size: 2.5rem; font-weight: 700; color: var(--primary-gold); }
+
+        /* --- FOOTER --- */
+        footer { background: var(--dark-charcoal); color: white; padding: 80px 0 30px; }
+        .footer-logo { font-size: 1.8rem; font-weight: 700; margin-bottom: 20px; display: block; }
+        .footer-logo span { color: var(--primary-gold); }
+        .footer-heading { color: var(--primary-gold); text-transform: uppercase; font-size: 1rem; font-weight: 700; margin-bottom: 25px; letter-spacing: 1px; }
+        .footer-links { list-style: none; padding: 0; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        .footer-links a:hover { color: var(--primary-gold); padding-left: 5px; }
+        .social-links a { color: white; margin-right: 15px; font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--primary-gold); }
+        @media (max-width: 991px) { .nav-social-icons { border-left: none; margin-left: 0; padding-left: 15px; margin-top: 15px; } .navbar-main { border-radius: 0; } }
+        @media (max-width: 768px) { .hero-content h1 { font-size: 2.5rem; } .carousel-item { height: 70vh; } }
+    </style>
+</head>
+<body>
+
+    <body>
+     <div class="container navbar-custom-container">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-main">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#">LUXE<span>SALON</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <div class="nav-social-icons">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>The Passion Behind the Art of Beauty</p>
+        </div>
+    </header>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <span class="accent-text">ESTABLISHED 2010</span>
+                    <h2 class="display-5 fw-bold mb-4">Dedicated to Making You Shine</h2>
+                    <p class="lead text-muted mb-4">Luxe Salon began with a simple vision: to create a sanctuary where beauty, comfort, and personalized care meet.</p>
+                    <p>What started as a small two-chair boutique has grown into the city's premier destination for luxury hair and skincare. We believe that every client is a unique canvas, and our mission is to enhance your natural features while providing a moment of pure relaxation in your busy day.</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-3 shadow mb-3" alt="Salon 1">
+                            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-3 shadow" alt="Salon 2">
+                        </div>
+                        <div class="col-6 pt-5">
+                            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-3 shadow" alt="Salon 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 mb-md-0 stat-item">
+                    <h3>12+</h3>
+                    <p class="mb-0 text-uppercase small">Years Experience</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0 stat-item">
+                    <h3>5000+</h3>
+                    <p class="mb-0 text-uppercase small">Happy Clients</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <h3>15+</h3>
+                    <p class="mb-0 text-uppercase small">Expert Stylists</p>
+                </div>
+                <div class="col-md-3 col-6 stat-item">
+                    <h3>100%</h3>
+                    <p class="mb-0 text-uppercase small">Organic Products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="accent-text">THE ARTISTS</span>
+                <h2 class="display-6 fw-bold">Meet Our Professionals</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <img src="https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=500&q=80" class="team-img" alt="Stylist">
+                        <div class="text-center">
+                            <h4 class="fw-bold">Elena Vance</h4>
+                            <span class="team-role">Senior Hair Stylist</span>
+                            <div class="social-links small">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" class="team-img" alt="Stylist">
+                        <div class="text-center">
+                            <h4 class="fw-bold">Julian Rossi</h4>
+                            <span class="team-role">Master Colorist</span>
+                            <div class="social-links small">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card">
+                        <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=500&q=80" class="team-img" alt="Stylist">
+                        <div class="text-center">
+                            <h4 class="fw-bold">Sophia Chen</h4>
+                            <span class="team-role">Skin Care Expert</span>
+                            <div class="social-links small">
+                                <a href="#" class="text-dark me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+        <div class="container">
+            <div class="row g-4 text-md-start text-center">
+                <div class="col-lg-4 col-md-6">
+                    <a class="footer-logo text-white text-decoration-none" href="#">LUXE<span>SALON</span></a>
+                    <p class="text-white-50 pe-md-5">Your premier destination for luxury beauty and wellness. We combine artistry with high-end care to redefine your style.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="contact.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Hair Styling</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">Nail Art</a></li>
+                        <li><a href="#">Bridal Makeup</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Visit Us</h5>
+                    <p class="text-white-50 mb-2"><i class="fas fa-map-marker-alt me-2 text-gold"></i> 123 Elegance St, NY 10001</p>
+                    <p class="text-white-50 mb-2"><i class="fas fa-phone-alt me-2 text-gold"></i> +1 234 567 890</p>
+                    <p class="text-white-50"><i class="fas fa-envelope me-2 text-gold"></i> hello@luxesalon.com</p>
+                </div>
+            </div>
+            <hr class="mt-5 opacity-25">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="small mb-0 opacity-50">& copy; 2026 Luxe Beauty Salon. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
